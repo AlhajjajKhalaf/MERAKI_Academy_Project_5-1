@@ -1,7 +1,7 @@
 import './style.css'
 import React, { useState, useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteCart } from '../../../redux/reducers/User';
+import { deleteCart } from '../../../../redux/reducers/User';
 import Counter from './Counter';
 
 const YourCart = () => {
@@ -14,25 +14,13 @@ const YourCart = () => {
             yourTotal: state.User.total,
         }
     })
-    const [totalPrice, setTotalPrice] = useState(
-        Userinfor.yourPrice.reduce((acc, element, index) => {
-        console.log(typeof element.price);
-        return acc + Number(element.price)
-    },0)
-    )
+
+
 
 
     console.log(Userinfor.yourPrice, "YourPrice")
     //!..............................
-    
- 
-     
-//   useEffect(() => {
-//     Userinfor.yourPrice.reduce((acc, element, index) => {
-//         console.log(typeof element.price);
-//         return acc + Number(element.price)
-//     },0)
-//   }, [Userinfor.yourCart])
+
 
 
 
