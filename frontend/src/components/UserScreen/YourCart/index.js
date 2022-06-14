@@ -58,8 +58,9 @@ const YourCart = ({ name }) => {
         <h1>{Userinfor.yourCart !== 0 && Userinfor.yourCart.length ? <div><h3>total:{Userinfor.yourTotal}</h3>
 
 
-
+           //////////////////////////////////////
             <button onClick={() => {
+                console.log("555")
                 complete();
                 dispatch(setsumPriceUser())
             }}>Go to the checkout</button>
