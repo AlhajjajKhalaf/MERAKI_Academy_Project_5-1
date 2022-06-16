@@ -26,9 +26,10 @@ const Counter = ({ element }) => {
             yourCart: state.User.cart,
             yourPrice: state.User.price,
             yourTotal: state.User.total,
+            totaltotla:state.User.showTotal
         }
     })
-    // console.log(Userinfor.yourCart, "cart cart")
+    console.log(Userinfor.yourCart, "cart cart")
     console.log(Userinfor.yourPrice, "Price Price ")
     //!..............................
 

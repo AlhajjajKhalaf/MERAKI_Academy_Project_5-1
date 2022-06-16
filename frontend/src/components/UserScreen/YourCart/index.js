@@ -18,6 +18,7 @@ const YourCart = () => {
       yourTotal: state.User.total,
       islogin: state.auth.isLoggedIn,
       name: state.User.name,
+      totaltotla:state.User.showTotal
     };
   });
 
@@ -54,7 +55,7 @@ const YourCart = () => {
       <h1>
         {Userinfor.yourCart !== 0 && Userinfor.yourCart.length ? (
           <div>
-            <h3>total:{Userinfor.yourTotal}</h3>
+            <h3>total:{Userinfor.totaltotla}</h3>
             <button
               onClick={() => {
                 complete();

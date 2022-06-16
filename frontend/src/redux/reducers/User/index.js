@@ -8,7 +8,7 @@ export const UserSlice = createSlice({
     price: [],
     searchRestaurants: [],
     restaurants: [],
-    total: 0,
+    total: [],
     sumpriceUser: 0,
     name: '',
     userId: '',
@@ -25,6 +25,7 @@ export const UserSlice = createSlice({
       if (state.cart.length == 0) {
         state.cart.push(action.payload.items);
       } else {
+
         let loop = true;
 
         state.cart = state.cart.filter((element, index) => {
@@ -94,13 +95,35 @@ export const UserSlice = createSlice({
 
     //!......................................................................
     setTotal: (state, action) => {
-      //payload = {"opr":"+" , value:10}
+      //payload = {"opr":"+" , value:10,id:id}
+       if(state.total.length==0){
+        state.total.push({id:action.payload.id,total: action.payload.value})
+        // state.total = state.total + action.payload.value;
+       }else{
+        let test =true
+       state.total =state.total.filter((element,index)=>{
 
-      if (action.payload.opr === "+") {
-        state.total = state.total + action.payload.value;
-      } else {
-        state.total = state.total - action.payload.value;
-      }
+          if(element.id== action.payload.id){
+       
+            
+
+          }
+          
+       })
+    
+    
+    
+    }
+
+
+       
+        
+
+    //   if (action.payload.opr === "+") {
+    //     state.total = state.total + action.payload.value;
+    //   } else {
+    //     state.total = state.total - action.payload.value;
+    //   }
     },
     //!......................................................................
 

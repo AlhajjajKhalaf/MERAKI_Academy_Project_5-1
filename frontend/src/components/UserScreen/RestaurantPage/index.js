@@ -14,10 +14,9 @@ import { useLocation } from 'react-router-dom'
 
 const RestaurantPage = () => {
   const dispatch = useDispatch()
-// console.log("start")
-  // const { state } = useLocation()
-  // const {id} = state
-    // console.log(localStorage.getItem("restaurantId"),"idaaaa")
+
+  
+
 
   const [sumreal, setSumreal] = useState(0)
   const [restaurant, setRestaurants] = useState('')
@@ -39,7 +38,8 @@ const RestaurantPage = () => {
   })
 
   const getRestaurant = async () => {
-// console.log( Userinfor.Idrestaurant,"4242")
+
+    
     const responseRestaurant = await User.getRestaurantById({
       restaurantId:localStorage.getItem("restaurantId"),
     })
@@ -87,7 +87,8 @@ const RestaurantPage = () => {
 
                     <div className="div_restur_Name">
                       <h1 className="H1_Name">{element.name}</h1>
-                      {/* <img className='imgLogo' src={element.Logo} /> */}
+                   
+                   
                       <div className="textadd">
                         <AiFillStar className="star" />
                         <h2 className="rating">4.8</h2>
@@ -206,10 +207,12 @@ const RestaurantPage = () => {
                                       setTotal({
                                         opr: '+',
                                         value: elementMall.price,
+                                        id:elementMall.id
                                       }),
                                     )
                                     console.log('44')
                                   }}
+                                  
                                 />
                               </div>
                             )
